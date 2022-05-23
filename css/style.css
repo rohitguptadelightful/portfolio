@@ -156,7 +156,7 @@ span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(128, 103, 240, 1);
+  background: #205375;
   font-size: 17px;
   color: var(--bg-color);
   margin-right: 22px;
@@ -203,6 +203,7 @@ header.sticky {
   grid-gap: 2rem;
   align-items: center;
   text-align: center;
+  margin-top: 1rem;
 }
 
 .sub-box {
@@ -240,9 +241,12 @@ header.sticky {
 
 .about {
   display: grid;
-  grid-template-columns: repeat(2, 2fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
   align-items: center;
   grid-gap: 2rem;
+  background: #ffffff;
+  box-shadow: 18px 0px 87px 0px rgb(10 15 70 / 7%);
+  border-radius: 12px;
 }
 
 .about-img img {
@@ -250,7 +254,11 @@ header.sticky {
   width: 540px;
   height: auto;
 }
-
+.about-text{
+  padding: 45px 45px 45px 45px;
+  transition: ease .50s;
+  cursor: pointer;
+}
 .about-text h2 {
   font-size: var(--h2-font);
   font-weight: 500;
@@ -271,7 +279,11 @@ header.sticky {
   line-height: 28px;
   margin-bottom: 45px;
 }
-
+.about-text:hover{
+  background: #ffffff;
+  box-shadow: 18px 0px 87px 0px rgb(10 15 70 / 7%);
+  border-radius: 12px;
+}
 .heading {
   text-align: center;
 }
@@ -411,6 +423,12 @@ header.sticky {
   color: var(--secound-color);
   line-height: 28px;
 }
+.row .btn{
+  margin: 20px 10px 10px;
+}
+.order{
+  background: #205375;
+}
 .row:hover{
   will-change: transform;
   transform: perspective(1000px) rotateX(4.80deg) rotateY(10.23deg) scale3d(1.05, 1.05, 1.05);
@@ -484,6 +502,18 @@ header.sticky {
   margin: 0 10px 20px 0;
   border-radius: 30px;
 }
+.contact .action form textarea{
+  max-width: 100%;
+  width: 470px;
+  border-radius: 30px;
+  padding: 12px 15px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  margin: 0 10px 20px 0;
+  display: block;
+}
 .contact .action form input[type="submit"]{
   padding: 12px 40px;
   background: var(--main-color);
@@ -494,11 +524,11 @@ header.sticky {
   border-radius: 30px;
   cursor: pointer;
 }
-.ends{
+.footer{
   text-align: center;
   padding: 40px;
 }
-.ends p{
+.footer p{
   font-size: var(--p-font);
   letter-spacing: 1px;
 }
@@ -596,5 +626,8 @@ header.sticky {
 @media (max-width: 540px){
   .contact .action form input[type="email"]{
     width: 310px;
+  }
+  .top-btn{
+    padding: 9px 9px;
   }
 }
