@@ -96,6 +96,7 @@ header {
   transition: ease .50s;
 }
 
+
 .top-btn:hover {
   transform: scale(1.1);
   background: var(--main-color);
@@ -261,12 +262,12 @@ header.sticky {
 
 .about-text {
   padding: 45px 45px 45px 45px;
-  transition: ease .50s;
+  transition: ease 0.50s;
   cursor: pointer;
 }
 
 .about-text h2 {
-  font-size: var(--h2-font);
+  font-size: 32px;
   font-weight: 500;
   margin: 8px 0px 25px;
   line-height: 1.1;
@@ -284,6 +285,7 @@ header.sticky {
   color: var(--secound-color);
   line-height: 28px;
   margin-bottom: 45px;
+  justify-content: center;
 }
 
 .about-text:hover {
@@ -545,11 +547,115 @@ header.sticky {
   height: auto;
   align-items: center;
 }
-
-.download-btn {}
-
-.download-btn a {
+.download-btn input[type="submit"]{
+  margin-top: 10px;
+  padding: 9px 30px;
+  background: transparent;
+  border: 2px solid var(--main-color);
+  border-radius: 30px;
+  color: var(--text-color);
+  letter-spacing: 1px;
+  font-size: var(--p-font);
+  font-weight: 500;
+  transition: ease .50s;
+}
+.download-btn input[type="submit"]:hover{
+  transform: scale(1.1);
+  background: var(--main-color);
+  border: 2px solid var(--main-color);
+  color: var(--bg-color);
+}
+/* Popup */
+.popup-section {
+  position: absolute;
+  visibility: hidden;
+  z-index: 9999;
+  background: #8067f0eb;
+  background-image: url(../img/intro.png);
+  margin: 10px 35%;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+}
+#cross-icon{
+  font-size: 30px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: var(--bg-color);
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  float: right;
+  margin-top: -10px;
+  right: 6%;
+  cursor: pointer;
+}
+.popup h3 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.popup p {
+  font-size: var(--p-font);
+  font-weight: 500;
+  color: #ffffff;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.popup form input[type="text"] {
+  max-width: 100%;
+  width: 220px;
+  padding: 12px 15px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  margin: 0 10px 20px 0;
+  border-radius: 30px;
+}
+
+.popup form input[type="email"] {
+  max-width: 100%;
+  width: 440px;
+  padding: 12px 15px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  margin: 0 10px 20px 0;
+  border-radius: 30px;
+}
+
+.popup form input[type="submit"] {
+  margin-top: 10px;
+  padding: 9px 30px;
+  background: transparent;
+  border: 2px solid var(--main-color);
+  border-radius: 30px;
+  color: var(--text-color);
+  letter-spacing: 1px;
+  font-size: var(--p-font);
+  font-weight: 500;
+  transition: ease .50s;
+}
+
+.popup form input[type="submit"]:hover {
+  transform: scale(1.1);
+  background: var(--main-color);
+  border: 2px solid var(--main-color);
+  color: var(--bg-color);
+}
+
+.open-popup {
+  position: relative;
+  visibility: visible;
+  z-index: 10000;
 }
 
 /* Contact */
@@ -641,7 +747,7 @@ footer p {
   text-align: center;
   font-size: var(--p-font);
   font-weight: 500;
-  color: var(--secound-color)
+  color: var(--secound-color);
 }
 
 .list-inline {
@@ -695,6 +801,76 @@ footer p {
   transform: scale(1.1);
   background: var(--main-color);
   transition: .5s;
+}
+
+/* Disclaimer */
+.disclaimer {
+  background: #ffffff;
+  box-shadow: 18px 0px 87px 0px rgb(10 15 70 / 7%);
+  border-radius: 12px;
+  padding: 50px 50px 50px 50px;
+  transition: ease .40s;
+  cursor: pointer;
+  margin-top: 4rem;
+}
+
+.disclaimer:hover {
+  transform: scale(1.02);
+}
+
+.disclaimer h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--main-color);
+}
+
+.disclaimer h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+.disclaimer h3 {
+  font-size: 1.2rem;
+}
+
+.disclaimer p {
+  font-size: var(--p-font);
+  color: var(--secound-color);
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.disclaimer a {
+  font-weight: 500;
+  display: inline-block;
+  transition: ease 0.40s;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #205375;
+}
+
+.disclaimer a:hover {
+  transform: scale(1.1);
+  color: var(--main-color);
+}
+
+.disclaimer ul {
+  padding: 20px 30px;
+}
+
+.disclaimer li {
+  font-size: var(--p-font);
+  color: var(--secound-color);
+  line-height: 28px;
+  list-style-type: disc;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.disclaimer li::before {
+  color: #205375;
 }
 
 @media (max-width: 1425px) {

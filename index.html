@@ -29,7 +29,7 @@
       <li><a href="#service">Service</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="doc/The Power of Social Media.pdf" download target="_blank" class="top-btn">Download Free eBook</a>
+    <a href="#download-ebook" download target="_blank" class="top-btn">Download Free eBook</a>
   </header>
 
   <!-- heder -->
@@ -249,7 +249,7 @@
       </div>
     </div>
   </section> -->
-  <section class="download-ebook">
+  <section class="download-ebook" id="download-ebook">
     <div class="heading">
       <h3>Download Free e-Book</h3>
       <h2>The Power Of Social Media</h2>
@@ -270,13 +270,35 @@
         <div class="download-img">
           <img src="img/the-power-of-social-media.jpg" alt="the-power-of-social-media.jpg">
         </div>
-
         <div class="download-btn">
-          <a href="doc/The Power of Social Media.pdf" download target="_blank" class="top-btn">Download Free eBook</a>
+          <button onclick="openPopup()">Download Free eBook</button>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Popup -->
+  <div class="popup-section" id="#popup-section">
+    <div onclick="closePopup()"class="bx bx-x" id="#cross-icon"></div>
+    <div class="popup">
+      <h3>Download Free eBook</h3>
+      <p>Fill this form to get instant Access.</p>
+      <div class="action">
+        <form>
+          <div class="">
+            <input type="text" name="firstName" placeholder="First Name" required>
+            <input type="text" name="lastName" placeholder="Last Name">
+          </div>
+          <div class="">
+            <input type="email" name="email" placeholder="Enter Your Email" required>
+          </div>
+          <div class="">
+            <input type="submit" value="Download Free eBook">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- Contact -->
   <section class="contact" id="contact">
@@ -288,21 +310,21 @@
           <form>
             <input type="email" name="email" placeholder="Enter Your Email" required>
             <textarea name="textarea" placeholder="Enter Your Message" rows="5" cols="80"></textarea>
-            <input type="submit" name="submit" value="Submit">
+            <input type="submit" value="Submit">
           </form>
         </div>
       </div>
     </div>
   </section>
+
   <footer>
     <div class="first">
-
     </div>
     <div class="middle">
       <ul class="list-inline">
-        <li class="list-inline-item"><a href="#">Disclaimer</a></li>
-        <li class="list-inline-item"><a href="#">Terms & Conditions</a></li>
-        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        <li class="list-inline-item"><a href="disclaimer.html">Disclaimer</a></li>
+        <li class="list-inline-item"><a href="termsandconditions.html">Terms & Conditions</a></li>
+        <li class="list-inline-item"><a href="privacypolicy.html">Privacy Policy</a></li>
       </ul>
       <p class="copyright">Made with love by Rohit Kumar Gupta ©️ 2022</p>
     </div>
