@@ -58,8 +58,8 @@ function downloadEbook() {
         method: 'POST',
         body: new FormData(form)
       })
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
+      .then(response => alert('eBook sent in your mail!', response))
+      .catch(error => console.error('Something Error', error.message))
   });
-  closePopup();
+closePopup();
 }
