@@ -29,7 +29,7 @@
       <li><a href="#service">Service</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="#download-ebook" target="_blank" class="top-btn">Download Free eBook</a>
+    <a class="top-btn" onclick="openPopup()">Download Free eBook</a>
   </header>
 
   <!-- heder -->
@@ -271,7 +271,8 @@
           <img src="img/the-power-of-social-media.jpg" alt="the-power-of-social-media.jpg">
         </div>
         <div class="download-btn">
-          <button onclick="openPopup()">Download Free eBook</button>
+          <input type="submit" onclick="openPopup()" value="Download Free eBook">
+          <!-- <button onclick="openPopup()">Download Free eBook</button> -->
         </div>
       </div>
     </div>
@@ -279,12 +280,14 @@
 
   <!-- Popup -->
   <div class="popup-section" id="#popup-section">
-    <div onclick="closePopup()"class="bx bx-x" id="#cross-icon"></div>
+    <div class="cross-icon" onclick="closePopup()">
+      <div class="bx bx-x "></div>
+    </div>
     <div class="popup">
       <h3>Download Free eBook</h3>
       <p>Fill this form to get instant Access.</p>
       <div class="action">
-        <form>
+        <form name="popupForm">
           <div class="">
             <input type="text" name="firstName" placeholder="First Name" required>
             <input type="text" name="lastName" placeholder="Last Name">
@@ -293,7 +296,7 @@
             <input type="email" name="email" placeholder="Enter Your Email" required>
           </div>
           <div class="">
-            <input type="submit" value="Download Free eBook">
+            <input type="submit" value="Download Free eBook" onclick="downloadEbook()">
           </div>
         </form>
       </div>

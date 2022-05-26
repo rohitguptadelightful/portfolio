@@ -38,11 +38,28 @@ sr.reveal(".sub-service,.about,.portfolio,.service,.cta,.contact", {
 });
 
 
-function openPopup(){
+function openPopup() {
   let popup = document.querySelector(".popup-section");
-  popup.classList.add("open-popup");
+  popup.classList.toggle("open-popup");
 }
-function closePopup(){
-  let popup = document.querySelector("#cross-icon");
+
+function closePopup() {
+  let popup = document.querySelector(".popup-section");
   popup.classList.remove("open-popup");
+}
+
+function downloadEbook() {
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwDPaFWqQscohwLdf0TUO_TSX1D7mA5E28QiVwCzKAwGxud5SDJQlDUovj_HfBib5fv0w/exec";
+  const form = document.forms["popupForm"];
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, {
+        method: 'POST',
+        body: new FormData(form)
+      })
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  });
+  closePopup();
 }
