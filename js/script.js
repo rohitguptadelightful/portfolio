@@ -64,8 +64,8 @@ function downloadEbook() {
   closePopup();
 }
 
-function contactForm() {
-  const scriptURL = "https://script.google.com/macros/s/AKfycbwDPaFWqQscohwLdf0TUO_TSX1D7mA5E28QiVwCzKAwGxud5SDJQlDUovj_HfBib5fv0w/exec";
+function sentMessage() {
+  const scriptURL = "https://script.google.com/macros/s/AKfycbxdoGWV28RncEVvHzCA4TWzOsw20jUgGjtG9jTw-P72pD6JZZGnpNBPC9kvZaRe8XEA/exec";
   const form = document.forms["contactForm"];
 
   form.addEventListener('submit', e => {

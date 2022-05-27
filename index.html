@@ -311,10 +311,12 @@
         <p>Don't like forms? Send me an Email.</p>
         <div class="action">
           <form name="contactForm">
-            <input type="text" name="Name" placeholder="Name" required>
-            <input type="email" name="Email" placeholder="Enter Email" required>
-            <textarea name="Message" placeholder="Enter Your Message" rows="5" cols="80"></textarea>
-            <input type="submit" value="Submit" onclick="contactForm()">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Enter Email" required>
+            <textarea name="message" placeholder="Enter Your Message" rows="4" cols="80"></textarea>
+            <div class="">
+              <input type="submit" value="Submit" onclick="sentMessage()">
+            </div>
           </form>
         </div>
       </div>
