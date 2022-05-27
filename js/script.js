@@ -61,5 +61,20 @@ function downloadEbook() {
       .then(response => alert('eBook sent in your mail!', response))
       .catch(error => console.error('Something Error', error.message))
   });
-closePopup();
+  closePopup();
+}
+
+function contactForm() {
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwDPaFWqQscohwLdf0TUO_TSX1D7mA5E28QiVwCzKAwGxud5SDJQlDUovj_HfBib5fv0w/exec";
+  const form = document.forms["contactForm"];
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, {
+        method: 'POST',
+        body: new FormData(form)
+      })
+      .then(response => alert('Your Message Sent!', response))
+      .catch(error => console.error('Something Error', error.message))
+  });
 }
