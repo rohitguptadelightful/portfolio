@@ -61,6 +61,9 @@ function downloadEbook() {
       .then(response => alert('eBook sent in your mail!', response))
       .catch(error => console.error('Something Error', error.message))
   });
+  setTimeout(function(){
+    form.reset();
+  }, 5000);
   closePopup();
 }
 
@@ -77,4 +80,7 @@ function sentMessage() {
       .then(response => alert('Your Message Sent!', response))
       .catch(error => console.error('Something Error', error.message))
   });
+  setTimeout(function(){
+    form.reset();
+  }, 5000);
 }
