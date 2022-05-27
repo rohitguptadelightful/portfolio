@@ -44,7 +44,6 @@ header {
   width: 130px;
   height: auto;
 } */
-
 .navlist {
   display: flex;
 }
@@ -195,7 +194,6 @@ span {
   width: 540px;
   height: auto;
 } */
-
 header.sticky {
   background: var(--bg-color);
   padding: 13px 18%;
@@ -260,7 +258,6 @@ header.sticky {
   width: 540px;
   height: auto;
 } */
-
 .about-text {
   padding: 45px 45px 45px 45px;
   transition: ease 0.50s;
