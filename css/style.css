@@ -758,12 +758,14 @@ header.sticky {
 .contact .action form input[type="submit"]:hover {
   transform: scale(1.1);
 }
-.other-contacts h4{
+
+.other-contacts h4 {
   margin-bottom: 10px;
   color: #ffffff;
   font-weight: 400;
 }
-.contact-options a{
+
+.contact-options a {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -777,11 +779,12 @@ header.sticky {
   margin-bottom: 30px;
 }
 
-.contact-options a:hover{
+.contact-options a:hover {
   transform: scale(1.1);
   background: var(--main-color);
   transition: .5s;
 }
+
 /* Footer */
 footer {
   width: 100%;
