@@ -112,7 +112,7 @@ section {
   min-height: 100vh;
   height: 100%;
   width: 100%;
-  background: url(../img/background.jpg);
+  background: url(../img/background.webp);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -233,6 +233,7 @@ header.sticky {
   font-size: var(--p-font);
   color: var(--secound-color);
   line-height: 29px;
+  text-align: justify;
 }
 
 .sub-box:hover {
@@ -443,6 +444,8 @@ header.sticky {
   font-size: var(--p-font);
   color: var(--secound-color);
   line-height: 28px;
+  text-align: justify;
+  ;
 }
 
 .row .btn {
@@ -515,9 +518,8 @@ header.sticky {
 
 .ebook-features {
   padding: 45px;
-  justify-content: space-around;
-  word-wrap: break-word;
-  width: 70%;
+  text-align: justify;
+  width: 68%;
 }
 
 .ebook-features h3 {
@@ -570,16 +572,20 @@ header.sticky {
 /* Popup */
 .popup-section {
   position: absolute;
+  max-width: 100%;
+  width: 50%;
+  height: auto;
   visibility: hidden;
   z-index: 2;
+  margin-left: 25%;
   background: #8067f0eb;
   background-image: url(../img/intro.png);
-  margin: 10px 35%;
   padding: 30px;
   align-items: center;
   justify-content: center;
   text-align: center;
   border-radius: 12px;
+  box-shadow: 10px 10px 10px rgb(0 0 0 / 50%);
 }
 
 .cross-icon {
@@ -673,7 +679,8 @@ header.sticky {
   background: #8067f0eb;
   width: 64%;
   margin: 30px auto 100px;
-  padding: 70px 150px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -737,7 +744,7 @@ header.sticky {
   margin: 0 auto 20px auto;
   display: block;
   font-size: var(--p-font);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 28px;
   letter-spacing: 1px;
 }
@@ -774,8 +781,7 @@ header.sticky {
   background: #205375;
   font-size: 17px;
   color: var(--bg-color);
-  margin-right: 22px;
-  margin-bottom: 30px;
+  margin-right: 20px;
 }
 
 .contact-options a:hover {
@@ -925,38 +931,225 @@ footer p {
   color: #205375;
 }
 
+/* Media Query */
 @media (max-width: 1425px) {
-  header {
-    padding: 16px 3%;
-    transition: .3s;
+  .home-text h1 {
+    font-size: 2.9rem;
   }
 
-  header.sticky {
-    padding: 10px 3%;
-    transition: .3s;
+  .about {
+    grid-template-columns: repeat(auto-fit, minmax(500px, auto));
   }
 
-  section {
-    padding: 70px 3%;
-    transition: .3s;
+  .about img {
+    width: 50%;
+    display: block;
+    margin: 0px auto;
   }
 
-  .contact {
-    width: 95%;
-    transition: .3s;
+  .about-text p {
+    max-width: 1000px;
   }
 
-  :root {
-    --big-font: 4rem;
-    --h2-font: 2.3rem;
-    --p-font: 1rem;
-    transition: .3s;
+  .popup form input[type="text"] {
+    width: 200px;
+  }
+
+  .popup .email-div {
+    padding: 0px 10px;
   }
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1200px) {
+  :root {
+    --h2-font: 38px;
+  }
+
+  .home {
+    min-height: 100vh;
+  }
+
+  .logo img {
+    width: 80px;
+    height: auto;
+  }
+
+  .top-btn {
+    padding: 8px 15px;
+    font-size: 15px;
+  }
+
+  .home-img img {
+    width: 350px;
+  }
+
+  .home-text h1 {
+    font-size: 2.6rem;
+  }
+
+  .items {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sub-box {
+    padding: 20px;
+  }
+
+  .sub-box h3 {
+    font-size: 20px;
+  }
+
+  .sub-box p {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .ebook-box {
+    padding: 30px;
+    margin-top: 3rem;
+  }
+
+  .ebook-features li {
+    line-height: 22px;
+  }
+
+  .download-content img {
+    width: 168px;
+    height: auto;
+  }
+
+  .ebook-features {
+    padding: 30px;
+  }
+
+  .download-btn input[type="submit"] {
+    padding: 8px 15px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --h2-font: 34px;
+  }
+
+  .logo img {
+    width: 64px;
+    height: auto;
+  }
+
+  .top-btn {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+
+  .navlist a {
+    padding: 10px 20px;
+  }
+
+  .home-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-img img {
+    width: 320px;
+  }
+
+  .home-text h5 {
+    font-size: 16px;
+  }
+
+  .home-text p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 8px 26px;
+  }
+
+  .download-content {
+    margin: auto 0px;
+  }
+
+  footer p {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --h2-font: 30px;
+  }
+
+  .navlist a {
+    padding: 10px 14px;
+  }
+
+  .home {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .home h1 {
+    font-size: 3rem;
+  }
+
+  .home-text h5 {
+    font-size: 16px;
+  }
+
+  .home-text p {
+    font-size: 16px;
+  }
+
+  .home-img img {
+    margin: 0 auto;
+  }
+
+  .items {
+    grid-template-columns: repeat(2, minmax(220px, auto));
+  }
+
+  .ebook-features li {
+    line-height: 18px;
+    font-size: 16px;
+  }
+
+  .contact .action form input[type="text"] {
+    width: 300px;
+    padding: 6px 15px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .contact .action form input[type="email"] {
+    width: 300px;
+    padding: 6px 15px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .contact .action form textarea {
+    width: 300px;
+    padding: 6px 15px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .list-inline a {
+    padding: 8px 20px;
+  }
+
+  .popup-section {
+    margin-left: 18%;
+  }
+}
+
+@media (max-width: 768px) {
   #menu-icon {
     display: block;
+    margin: 0 auto;
   }
 
   .home {
@@ -994,54 +1187,387 @@ footer p {
   .navlist.active {
     top: 100%;
   }
+
+  .items {
+    grid-template-columns: repeat(1, minmax(220px, auto));
+  }
+
+  .popup-section {
+    margin-left: 20%;
+  }
+
+  .sub-box p {
+    font-size: var(--p-font);
+  }
+
+  .ebook-box {
+    flex-direction: column;
+  }
+
+  .ebook-features {
+    width: 100%;
+  }
+
+  .ebook-features li {
+    width: 100%;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .download-content {
+    width: 100%;
+  }
+
+  .download-content img {
+    margin: 0 20%;
+  }
+
+  .download-btn input[type="submit"] {
+    padding: 6px 10px;
+    font-size: 10px;
+    margin: 0 30%;
+  }
+
+  .popup h3 {
+    font-size: 1.8rem;
+  }
+
+  .popup p {
+    font-size: 12px;
+  }
+
+  .popup form input[type="text"] {
+    padding: 8px 15px;
+  }
+
+  .popup form input[type="email"] {
+    padding: 12px 15px;
+    width: 220px;
+  }
+
+  .popup form input[type="submit"] {
+    padding: 6px 18px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+
+  .list-inline a {
+    font-size: 12px;
+  }
 }
 
-@media (max-width: 800px) {
-  .home {
-    grid-template-columns: 1fr;
-    min-height: 130vh;
-    grid-gap: 1rem;
-  }
-
-  .home-text {
-    padding-top: 55px;
-  }
-
-  .home-img {
-    text-align: center;
-  }
-
-  .home-img img {
-    width: 440px;
-    height: auto;
+@media (max-width: 600px) {
+  .home h1 {
+    font-size: 2.8rem;
   }
 
   .about {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, minmax(220px, auto));
   }
 
-  .about-img {
-    text-align: center;
-    margin-bottom: 30px;
+  .about-text h2 {
+    font-size: 26px;
   }
 
-  :root {
-    --big-font: 3.4rem;
-    --h2-font: 2rem;
+  .about-text h3 {
+    font-size: 16px;
   }
 
-  section {
-    padding: 65% 3%;
-    transition: .3s;
+  .about-text p {
+    font-size: 16px;
   }
 }
 
-@media (max-width: 540px) {
-  .contact .action form input[type="email"] {
-    width: 310px;
+@media (max-width: 480px) {
+  .home h1 {
+    font-size: 2.2rem;
   }
 
-  .top-btn {
-    padding: 9px 9px;
+  .about-text {
+    padding: 30px;
+  }
+
+  .service-content {
+    grid-template-columns: repeat(1, minmax(300px, auto));
+  }
+
+  .ebook-box {
+    padding: 20px;
+  }
+
+  .download-content img {
+    margin: 0px auto;
+  }
+
+  .download-btn input[type="submit"] {
+    margin: 10px 40px;
+  }
+
+  .popup form input[type="email"] {
+    width: 260px;
+    padding: 10px 15px;
+    margin: 0 0px 20px 0;
+  }
+
+  .popup form input[type="submit"] {
+    width: 160px;
+    font-size: 14px;
+    padding: 6px 2px;
+    letter-spacing: 0px;
+  }
+
+  .center p {
+    font-size: 16px;
+  }
+
+  .contact .action form input[type="text"] {
+    width: 220px;
+  }
+
+  .contact .action form input[type="email"] {
+    width: 220px;
+  }
+
+  .contact .action form textarea {
+    width: 220px;
+  }
+
+  .list-inline a {
+    font-size: 8px;
+  }
+
+  footer p {
+    font-size: 10px;
+  }
+
+  .third a {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  :root {
+    --h2-font: 1rem;
+    --p-font: 14px;
+  }
+
+  section {
+    padding: 50px 5%;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .navlist {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navlist a {
+    padding: 8px;
+    margin: 6px;
+  }
+
+  header {
+    padding: 20px 10%;
+  }
+
+  #menu-icon {
+    font-size: 25px;
+  }
+
+  .home-text h3 {
+    margin-top: 60px;
+    font-size: 12px;
+    text-align: justify;
+  }
+
+  .home h1 {
+    font-size: 34px;
+  }
+
+  .home-text p {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .social a {
+    width: 30px;
+    height: 30px;
+    margin-right: 6px
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 6px 20px;
+  }
+
+  .home img {
+    width: 220px;
+  }
+
+  .about-img img {
+    width: 200px;
+  }
+
+  .about-text {
+    padding: 25px;
+  }
+
+  .about-text p {
+    line-height: 26px;
+  }
+
+  .service-content {
+    grid-template-columns: repeat(1, minmax(240px, auto));
+  }
+
+  .ebook-box {
+    padding: 10px;
+  }
+
+  .ebook-features {
+    padding: 10px 10px 10px 20px;
+  }
+
+  .ebook-features h3 {
+    font-size: 20px;
+  }
+
+  .ebook-features li {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .download-content img {
+    width: 120px;
+  }
+
+  .download-btn input[type="submit"] {
+    margin: 10px 20px;
+  }
+
+  .popup h3 {
+    font-size: 1rem;
+  }
+
+  .popup p {
+    font-size: 10px;
+    font-weight: 300;
+    margin-top: 5px;
+    padding-bottom: 10px;
+  }
+
+  .popup form input[type="text"] {
+    margin-top: 5px;
+    width: 260px;
+    padding: 6px 10px;
+    font-weight: 400;
+    margin: 0 10px 10px 0;
+    border-radius: 12px;
+    font-size: 10px;
+  }
+
+  .popup .email-div {
+    padding: 0px;
+  }
+
+  .popup form input[type="email"] {
+    width: 260px;
+    padding: 6px 10px;
+    font-weight: 400;
+    margin: 0 10px 10px 0;
+    border-radius: 12px;
+    font-size: 10px;
+  }
+
+  .popup form input[type="submit"] {
+    font-weight: 400;
+    width: 80px;
+  }
+
+  .center h3 {
+    font-size: 16px;
+  }
+
+  .center p {
+    font-size: 8px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .contact {
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+  }
+
+  .contact .action form input[type="text"] {
+    width: 160px;
+    padding: 6px 10px;
+    font-weight: 400;
+    margin: 0 10px 10px 0;
+    border-radius: 12px;
+    font-size: 10px;
+  }
+
+  .contact .action form input[type="email"] {
+    width: 160px;
+    padding: 6px 10px;
+    font-weight: 400;
+    margin: 0 10px 10px 0;
+    border-radius: 12px;
+    font-size: 10px;
+  }
+
+  .contact .action form textarea {
+    +display: block;
+    width: 160px;
+    padding: 6px 10px;
+    font-weight: 400;
+    border-radius: 12px;
+    font-size: 10px;
+  }
+
+  .contact .action form input[type="submit"] {
+    padding: 4px 16px;
+    margin-bottom: 10px;
+  }
+
+  .other-contacts h4 {
+    font-size: 12px;
+  }
+
+  .contact-options a {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  footer {
+    padding: 30px 10%;
+    justify-content: space-around;
+  }
+
+  footer p {
+    font-size: 8px;
+  }
+
+  .list-inline a {
+    font-size: 6px;
+    padding: 6px 16px;
+  }
+
+  .middle {
+    width: 90%;
+  }
+
+  .third {
+    width: 5%;
   }
 }
