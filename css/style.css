@@ -1281,8 +1281,14 @@ footer p {
 }
 
 @media (max-width: 480px) {
+  section{
+    padding: 50px 5%;
+  }
   .home h1 {
     font-size: 2.2rem;
+  }
+  .home img {
+    width: 220px;
   }
 
   .about-text {
@@ -1290,7 +1296,7 @@ footer p {
   }
 
   .service-content {
-    grid-template-columns: repeat(1, minmax(300px, auto));
+    grid-template-columns: repeat(1, minmax(260px, auto));
   }
 
   .ebook-box {
@@ -1354,17 +1360,8 @@ footer p {
     --p-font: 14px;
   }
 
-  section {
-    padding: 50px 5%;
-  }
-
   .logo img {
     width: 60px;
-  }
-
-  .navlist {
-    display: flex;
-    justify-content: space-between;
   }
 
   .navlist a {
